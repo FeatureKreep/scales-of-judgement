@@ -1,0 +1,29 @@
+<Line id='0'>Wake up, sleepyhead!</Line>
+<Line id='1'>...</Line>
+<Line id='2'>I SAID WAKE UP!</Line>
+<Line id='3'>Finally. Hope you had a nice sleep.</Line>
+<Line id='4' type='DiagChoice' answer0='Where am I?' answer1='Are you an angel?'>Hey, are you listening to me?</Line>
+<Line id='5'>
+	<Answer id='0' sfx='sigh'>You really can't tell?</Answer>
+	<Answer id='1' sfx='laugh2'>Teehee. Not quite, honey. But thanks.</Answer></Line>
+<Line id='6' type='DiagChoice' answer0='Am I in Hell?' answer1='Eternity?'>I'm sure you've got many questions, but you'll have an eternity to find your answers.</Line>
+<Line id='7'>
+	<Answer id='0'>We don't use the H-word here. We prefer to call this place a [color=#ff0000]Forever Home for Morally Divergent[/color].</Answer>
+	<Answer id='1'>Yep, as in capital E eternity. So you'd best buckle down.</Answer>
+</Line>
+<Line id='8' type='DiagChoice' answer0='But what did I do?' answer1='Let me out of here!'>Anyway, welcome! I hope you'll like it here. Not that you have any choice.
+</Line>
+<Line id='9'>
+	<Answer id='0' sfx='huh'>How should I know? I'm just your friendly administrator.</Answer>
+	<Answer id='1'>Honestly, it's not so bad here. I think you'll get used to it.</Answer></Line>
+<Line id='10' type='DiagChoice' answer0='Is there any way out?' answer1='I would like to appeal my case'>Listen, I've got 13 thousand more souls to greet, so I'd appreciate it if you moved along.</Line>
+<Line id='11'>
+	<Answer id='0' sfx='sigh'>Ah, why do these things always happen on my shift?</Answer>
+	<Answer id='1' sfx='sigh'>You're gonna keep pestering me, ain't ya?</Answer></Line>
+<Line id='12'>I hope you don't think this is some Pixar movie where you can simply learn your lesson.</Line>
+<Line id='13' type='DiagChoice' answer0='My body is ready' answer1='W-wait, hold on!'>The way we're doing things here is a bit more... PG-13.</Line>
+<Line id='14'>
+	<Answer id='0' sfx='laugh3'>It's not that kind of game, silly.</Answer>
+	<Answer id='1' sfx='laugh'>There's no turning back now.</Answer></Line>
+<Line id='15'>Alright, come. Let us go to the [color=#ff0000]Scales of Judgement[/color]!</Line>
+<Line id='16' type='End'></Line>
