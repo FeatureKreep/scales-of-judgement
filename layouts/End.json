@@ -1,0 +1,230 @@
+{
+	"name": "End",
+	"layers": [
+		{
+			"name": "World",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "DialogueText",
+					"properties": {
+						"text": "And so, your eternal soul was saved and ascended to heaven.\n\nAs always, violence proved to be the ultimate solution.\n\nYou glance back and see beneath you thousands of demon corpses.\n\nA part of you is relieved to be leaving this place.\n\n\n\n\n\n...another part regrets that it's all over this soon. ",
+						"enable-bbcode": true,
+						"character-width": 9,
+						"character-height": 10,
+						"character-set": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890:+-,.!?%#'`\"@$_",
+						"spacing-data": "[\n[8,\"Wmw@\"],\n[7,\"MV%\"],\n[6,\"ABCDLEFGHKNOPQRSTUXYZabcdeghknopqsuvxyz?023456789\"],\n[5,\"JLtfz\"],\n[4,\"jr-\"],\n[3,\"Il,1 \"],\n[2,\"i.!:'\"]\n]",
+						"scale": 1,
+						"character-spacing": 1,
+						"line-height": 1,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 132,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 132,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 320,
+						"y": 480,
+						"width": 346,
+						"height": 176,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ThanksText",
+					"properties": {
+						"text": "[scale=2]THANKS FOR PLAYING![/scale]\n\n\nMADE FOR GAME OFF 2023",
+						"enable-bbcode": true,
+						"character-width": 9,
+						"character-height": 10,
+						"character-set": "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890:+-,.!?%#'`\"@$_",
+						"spacing-data": "[\n[8,\"Wmw@\"],\n[7,\"MV%\"],\n[6,\"ABCDLEFGHKNOPQRSTUXYZabcdeghknopqsuvxyz?023456789\"],\n[5,\"JLtfz\"],\n[4,\"jr-\"],\n[3,\"Il,1 \"],\n[2,\"i.!:'\"]\n]",
+						"scale": 1,
+						"character-spacing": 1,
+						"line-height": 1,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 133,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 133,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": false,
+							"w": false,
+							"h": false,
+							"a": false,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 320,
+						"y": 190,
+						"width": 346,
+						"height": 132,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "CursorSprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 163,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 201,
+						"y": -79,
+						"width": 38,
+						"height": 38,
+						"originX": 0.15789473684210525,
+						"originY": 0.13157894736842105,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 266360400023483,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0,
+				0,
+				0,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 875213695862550,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 640,
+	"height": 360,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "eEnd"
+}
