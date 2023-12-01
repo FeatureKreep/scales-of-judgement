@@ -6,8 +6,11 @@ The game is a pulse-pounding shooter where you need to scale to the top using th
 
 ## Controls
 
--**AD/Arrow keys** — move left and right
--**W/Up/Space** — jump
--**Left click** — shoot
--**Right click/R** — reload
+**AD/Arrow keys** — move left and right
+
+**W/Up/Space** — jump
+
+**Left click** — shoot
+
+**Right click/R** — reload
 
