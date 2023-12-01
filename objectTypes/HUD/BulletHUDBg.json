@@ -1,0 +1,32 @@
+{
+	"name": "BulletHUDBg",
+	"plugin-id": "TiledBg",
+	"sid": 623521286414428,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 125047250639029
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 562983082645823
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 32,
+		"height": 18,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 2837357,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

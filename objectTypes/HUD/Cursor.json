@@ -1,0 +1,32 @@
+{
+	"name": "Cursor",
+	"plugin-id": "NinePatch",
+	"sid": 316172068497336,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 745584391507306
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 300039224253893
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 38,
+		"height": 38,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 6147561,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -1,0 +1,1253 @@
+{
+	"name": "eIntro",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 386725792765149
+				}
+			],
+			"actions": [
+				{
+					"id": "play-timeline",
+					"objectClass": "TimelineController",
+					"sid": 124338976507723,
+					"parameters": {
+						"timeline": "Succuboss",
+						"tags": "\"intro\""
+					}
+				},
+				{
+					"id": "set-timeline-playback-rate-by-tags",
+					"objectClass": "TimelineController",
+					"sid": 448250760722434,
+					"parameters": {
+						"tags": "\"intro\"",
+						"rate": "1.4"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 349740370381763,
+					"parameters": {
+						"tag": "\"intro\"",
+						"file": "intro.xml"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 209256118811703,
+					"parameters": {
+						"audio-file": "intro-bgm",
+						"loop": "looping",
+						"volume": "-20",
+						"stereo-pan": "0",
+						"tag-optional": "\"bgm\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 388916631143912,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 130693783799403,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"callFunction": "Dialogue",
+					"sid": 497784254539615,
+					"parameters": [
+						"10"
+					]
+				}
+			],
+			"sid": 657040570002636
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 102636034997214
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "SuccubusMouth",
+					"sid": 100338496467968,
+					"parameters": {
+						"speed": "8"
+					}
+				}
+			],
+			"sid": 492623405857099
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 870220100645061
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-speed",
+					"objectClass": "SuccubusMouth",
+					"sid": 891478789777307,
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "SuccubusMouth",
+					"sid": 743674747686894,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 662288798723814
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 279392917497318,
+					"parameters": {
+						"tag": "\"intro\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "XML",
+					"sid": 939991423646605,
+					"parameters": {
+						"xml": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 166383735145510
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 434050786853535,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "is-playing",
+					"objectClass": "GameManager",
+					"sid": 389980860601014,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Outro\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "DialogueBox",
+					"sid": 397472666140720
+				}
+			],
+			"actions": [],
+			"sid": 250115833426519,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "DiagChoice",
+							"sid": 386212049598312
+						}
+					],
+					"actions": [],
+					"sid": 997916927002693
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 444098278041366
+						}
+					],
+					"actions": [],
+					"sid": 140612435772266,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-running-typewriter-text",
+									"objectClass": "DialogueText",
+									"sid": 969311488599631
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 370269699020133,
+									"parameters": {
+										"seconds": "0"
+									}
+								},
+								{
+									"id": "typewriter-finish",
+									"objectClass": "DialogueText",
+									"sid": 748517039469876
+								}
+							],
+							"sid": 128723012770809
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 170135387817695
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Dialogue",
+									"sid": 970482869639259,
+									"parameters": [
+										"10"
+									]
+								}
+							],
+							"sid": 238883881861300
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 273414143525354,
+					"parameters": {
+						"object": "DiagChoice"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 161718394653148,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 855075077677603,
+							"parameters": {
+								"object": "DiagChoice"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "DiagChoiceText",
+							"sid": 195651049089282,
+							"parameters": {
+								"color": "rgbEx255(255, 255, 255)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "DiagChoice",
+							"sid": 900725556777069,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 959791243590405
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 580876039689802
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "DiagChoiceText",
+							"sid": 393991661192160,
+							"parameters": {
+								"color": "rgbEx255(0, 0, 0)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "DiagChoice",
+							"sid": 388680244881673,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 262710696268209
+				}
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "Line",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 466901864482839
+		},
+		{
+			"eventType": "variable",
+			"name": "DiagType",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 682843375797125
+		},
+		{
+			"eventType": "variable",
+			"name": "SfxType",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 378276702866352
+		},
+		{
+			"functionName": "Dialogue",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "DiagAnswer",
+					"type": "number",
+					"initialValue": "10",
+					"comment": "",
+					"sid": 721037064356901
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 509337438937495,
+					"parameters": {
+						"seconds": "0"
+					}
+				}
+			],
+			"sid": 601492249032889,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 488761453406213,
+							"parameters": {
+								"variable": "DiagAnswer",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 254435983464698,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "XML.StringValue(\"/Line[@id=\" & Line & \"]/@sfx\")",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 403251225553890,
+							"parameters": {
+								"text": "XML.StringValue(\"/Line[@id=\" & Line & \"]/text()\")",
+								"duration": "len(XML.StringValue(\"/Line[@id=\" & Line & \"]/text()\"))*0.01"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "DialogueBox",
+							"sid": 978278306975851,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"Dialogue\"",
+								"property": "size",
+								"end-x": "max(int((DialogueText.TextWidth+40)/2)*2,92)",
+								"end-y": "max(int((DialogueText.TextHeight+20)/2)*2,64)",
+								"time": "0.24",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 927890071681638,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 155244221172280,
+									"parameters": {
+										"variable": "DiagType",
+										"comparison": 0,
+										"value": "\"DiagChoice\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 225965835030596,
+									"parameters": {
+										"object-to-create": "DiagChoice",
+										"layer": "\"Dialogue\"",
+										"x": "320",
+										"y": "300",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "DiagChoiceText",
+									"sid": 623159212849079,
+									"parameters": {
+										"text": "XML.StringValue(\"/Line[@id=\" & Line & \"]/@answer0\")"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DiagChoice",
+									"sid": 510869640668436,
+									"parameters": {
+										"instance-variable": "Choice",
+										"value": "0"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 828045987181149,
+									"parameters": {
+										"object-to-create": "DiagChoice",
+										"layer": "\"Dialogue\"",
+										"x": "320",
+										"y": "330",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "DiagChoiceText",
+									"sid": 779077129212912,
+									"parameters": {
+										"text": "XML.StringValue(\"/Line[@id=\" & Line & \"]/@answer1\")"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DiagChoice",
+									"sid": 826588451541591,
+									"parameters": {
+										"instance-variable": "Choice",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 282949178761225
+						},
+						{
+							"eventType": "comment",
+							"text": "when the dialogue ends, the game state changes to \"play\""
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 470928561066487,
+									"parameters": {
+										"variable": "DiagType",
+										"comparison": 0,
+										"value": "\"End\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "DialogueBox",
+									"sid": 941708613590361,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "tween-value",
+									"objectClass": "GameManager",
+									"sid": 821997653295644,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"WakeUp\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "1.5",
+										"ease": "easeoutsine",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 293407460049231,
+									"parameters": {
+										"tag": "\"bgm\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 247240541573020,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 397738058850597,
+									"parameters": {
+										"layout": "Level"
+									}
+								}
+							],
+							"sid": 703472197996830
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 163626468033131,
+									"parameters": {
+										"variable": "Line",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 689270683461918,
+									"parameters": {
+										"variable": "DiagType",
+										"value": "XML.StringValue(\"/Line[@id=\" & Line & \"]/@type\")"
+									}
+								}
+							],
+							"sid": 633129472824035
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 817428462829493
+						}
+					],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 529532115326463,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "XML.StringValue(\"/Line[@id=\" & Line & \"]/Answer[@id=\" & DiagAnswer & \"]/@sfx\")",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueText",
+							"sid": 688282705490236,
+							"parameters": {
+								"text": "XML.StringValue(\"/Line[@id=\" & Line & \"]/Answer[@id=\" & DiagAnswer & \"]/text()\")",
+								"duration": "len(XML.StringValue(\"/Line[@id=\" & Line & \"]/Answer[@id=\" & DiagAnswer & \"]/text()\"))*0.01"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "DialogueBox",
+							"sid": 156215779867952,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"Dialogue\"",
+								"property": "size",
+								"end-x": "max(int((DialogueText.TextWidth+40)/2)*2,92)",
+								"end-y": "max(int((DialogueText.TextHeight+20)/2)*2,72)",
+								"time": "0.24",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 948615740498358,
+							"parameters": {
+								"variable": "Line",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 605415694269071,
+							"parameters": {
+								"variable": "DiagType",
+								"value": "XML.StringValue(\"/Line[@id=\" & Line & \"]/@type\")"
+							}
+						}
+					],
+					"sid": 328047718784381
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Choose answers",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 704871058501400,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "DiagChoice"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 590037424942075,
+							"parameters": {
+								"seconds": "0"
+							}
+						},
+						{
+							"callFunction": "Dialogue",
+							"sid": 139491342594723,
+							"parameters": [
+								"DiagChoice.Choice"
+							]
+						}
+					],
+					"sid": 281511696072326,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 752695152240598,
+									"parameters": {
+										"object": "DiagChoice"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "DiagChoice",
+									"sid": 386910277339990
+								}
+							],
+							"sid": 485094953076636
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 195291056958520,
+							"parameters": {
+								"variable": "Line",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-value",
+							"objectClass": "GameManager",
+							"sid": 774140828520074,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"WakeUp\"",
+								"start-value": "100",
+								"end-value": "0",
+								"time": "2.5",
+								"ease": "easeoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 235776646852462
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "GameManager",
+							"sid": 506727327633007,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"WakeUp\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 718217399516108,
+							"parameters": {
+								"layer": "\"Darkness\"",
+								"opacity": "GameManager.Tween.Value(\"WakeUp\")"
+							}
+						}
+					],
+					"sid": 324941700348387
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "GameManager",
+							"sid": 294772423886998,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"Outro\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 602585229654862,
+							"parameters": {
+								"layer": "\"Darkness\"",
+								"opacity": "GameManager.Tween.Value(\"Outro\")"
+							}
+						}
+					],
+					"sid": 535889789011515
+				}
+			],
+			"sid": 536841550033889
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Intro BG",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 949265448272928
+						}
+					],
+					"actions": [],
+					"sid": 585067112996971
+				}
+			],
+			"sid": 833044890517381
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 798254989490505
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 577595095285357,
+					"parameters": {
+						"cursor-style": "none"
+					}
+				}
+			],
+			"sid": 311993248545526
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 685274704943650
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "CursorSprite",
+					"sid": 779900077364403,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 537644069200018
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "mouse-button-is-down",
+					"objectClass": "Mouse",
+					"sid": 304076148290615,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "CursorSprite",
+					"sid": 807994820389170,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 275164247403758
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 177214070484298
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "CursorSprite",
+					"sid": 324197524116821,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 874706847795481
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 752995680571266,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 288625029887886,
+					"parameters": {
+						"object": "DiagChoice"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 175279480777800,
+					"parameters": {
+						"object": "SuccubossAccessories"
+					}
+				},
+				{
+					"id": "compare-layer-opacity",
+					"objectClass": "System",
+					"sid": 922160438916739,
+					"parameters": {
+						"layer": "\"Darkness\"",
+						"comparison": 0,
+						"opacity": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 580909091632449,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-active",
+							"objectClass": "SuccubossAccessories",
+							"sid": 344731688991494,
+							"behaviorType": "Sine",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 195595443285391,
+							"parameters": {
+								"object-to-create": "HeartEffect",
+								"layer": "\"Dialogue\"",
+								"x": "Mouse.X",
+								"y": "Mouse.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "tween-one-property",
+							"objectClass": "HeartEffect",
+							"sid": 602857208172685,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetY",
+								"end-value": "Self.Y-32",
+								"time": "0.32",
+								"ease": "easeoutsine",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "HeartEffect",
+							"sid": 398466357998826,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "0",
+								"end-y": "0",
+								"time": "0.5",
+								"ease": "easeoutsine",
+								"destroy-on-complete": "yes",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 647540761350396,
+							"parameters": {
+								"audio-file": "bounce",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "SuccubossAccessories",
+							"sid": 326313166299280,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 472665747254045,
+							"parameters": {
+								"seconds": "0.4"
+							}
+						},
+						{
+							"id": "set-cycle-position",
+							"objectClass": "SuccubossAccessories",
+							"sid": 109171226898470,
+							"behaviorType": "Sine",
+							"parameters": {
+								"cycle-position": "0"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "SuccubossAccessories",
+							"sid": 855920341791459,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 226772097509583
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-running-typewriter-text",
+					"objectClass": "DialogueText",
+					"sid": 237606484299555
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 331579544641310,
+					"parameters": {
+						"tag": "\"talk\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 630893729544967,
+					"parameters": {
+						"audio-file": "dialogue",
+						"loop": "looping",
+						"volume": "-35",
+						"stereo-pan": "0",
+						"tag-optional": "\"talk\""
+					}
+				}
+			],
+			"sid": 791606178342945
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-typewriter-text-finished",
+					"objectClass": "DialogueText",
+					"sid": 310616270051570
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 750297951818305,
+					"parameters": {
+						"tag": "\"talk\""
+					}
+				}
+			],
+			"sid": 172511924227781
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 756239918210158,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SkipButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueBox",
+					"sid": 588536330281201,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueText",
+					"sid": 929411543281235,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "GameManager",
+					"sid": 463606787195769,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Outro\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "1.5",
+						"ease": "easeoutsine",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 798288112549550,
+					"parameters": {
+						"tag": "\"bgm\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 564616134282140,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 742569731177734,
+					"parameters": {
+						"layout": "Level"
+					}
+				}
+			],
+			"sid": 831917903635000
+		}
+	],
+	"sid": 496919325614282
+}

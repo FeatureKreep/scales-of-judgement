@@ -1,0 +1,66 @@
+{
+	"name": "Shell",
+	"plugin-id": "Sprite",
+	"sid": 235598464550845,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 707921765964622
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 930525607455411
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 364947083768831
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7679680,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								0.9375,
+								0.125,
+								0.9375,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 615448252745012,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

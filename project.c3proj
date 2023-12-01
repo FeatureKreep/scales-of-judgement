@@ -1,0 +1,724 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 36900,
+	"name": "The Scales of Judgement",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": true,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline controller",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "XML",
+			"name": "XML",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Turret",
+			"name": "Turret",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurhorizontal",
+			"name": "Blur horizontal",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurvertical",
+			"name": "Blur vertical",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Brightness",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "replacesolidcolor",
+			"name": "Replace solid color",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "BetterOutline",
+			"author": "skymen",
+			"bundled": true,
+			"version": "1.4.0.3"
+		},
+		{
+			"type": "effect",
+			"id": "warpobject",
+			"name": "Warp object",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpobjectmask",
+			"name": "Warp object mask",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpradial",
+			"name": "Warp radial",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpripple",
+			"name": "Warp ripple",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "cjs99p6wkq9",
+	"objectTypes": {
+		"items": [
+			"Text",
+			"MenuBG",
+			"CreditsText",
+			"DeathEffect",
+			"Heart",
+			"Explosion"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"AJAX",
+					"Audio",
+					"Keyboard",
+					"TimelineController",
+					"XML",
+					"Mouse",
+					"Camera",
+					"GameManager"
+				],
+				"subfolders": [],
+				"name": "System"
+			},
+			{
+				"items": [
+					"Player",
+					"PlayerSprite",
+					"Gun",
+					"Bullet",
+					"PlayerHand"
+				],
+				"subfolders": [],
+				"name": "Player"
+			},
+			{
+				"items": [
+					"SuccubossAccessories",
+					"SuccubossBody",
+					"SuccubossEarring",
+					"SuccubossHead",
+					"SuccubusHorns",
+					"DialogueBox",
+					"DiagChoice",
+					"DiagChoiceText",
+					"DialogueText",
+					"SuccubusEar",
+					"SuccubusMouth",
+					"GameplayTip",
+					"FeatureKreep",
+					"FeatureKreepLogo",
+					"GameLogo",
+					"ScaleCup",
+					"ScaleHand",
+					"PressStart",
+					"IntroBG",
+					"Presents",
+					"ThanksText"
+				],
+				"subfolders": [],
+				"name": "Intro"
+			},
+			{
+				"items": [
+					"AmmoHUD",
+					"AmmoText",
+					"CircleText",
+					"Cursor",
+					"HPBarBG",
+					"HPPaarticles",
+					"HPPaarticles2",
+					"HealthBar",
+					"HealthHUD",
+					"HealthText",
+					"FinishLine",
+					"Shell",
+					"AmmoHudShake",
+					"BulletHUDBg",
+					"CursorSprite",
+					"SkipButton",
+					"CreditsButton",
+					"ReloadBar",
+					"ReloadHUD",
+					"GameOver"
+				],
+				"subfolders": [],
+				"name": "HUD"
+			},
+			{
+				"items": [
+					"Enemy",
+					"EnemyBullet",
+					"EnemyEye",
+					"EnemySprite",
+					"EnemyWing"
+				],
+				"subfolders": [],
+				"name": "Enemy"
+			},
+			{
+				"items": [
+					"DistortionMask",
+					"BulletTrail",
+					"BorderEffect",
+					"BlackBar",
+					"DustParticles",
+					"HeartEffect",
+					"Muzzle",
+					"LavaSparkles",
+					"LavaFlowParticles",
+					"BulletHit",
+					"LavaBubble"
+				],
+				"subfolders": [],
+				"name": "Effects"
+			},
+			{
+				"items": [
+					"FG",
+					"HellBG",
+					"Lava",
+					"BG",
+					"Platform",
+					"Chain"
+				],
+				"subfolders": [],
+				"name": "BG"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [
+		{
+			"members": [
+				"DiagChoice",
+				"DiagChoiceText"
+			]
+		},
+		{
+			"members": [
+				"Enemy",
+				"EnemySprite"
+			]
+		}
+	],
+	"families": {
+		"items": [
+			"HUDElements"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"ObjectDB",
+			"Logo",
+			"TitleScreen",
+			"Intro",
+			"Level",
+			"End"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"eGameplay",
+			"eIntro",
+			"eTitle",
+			"eLogo",
+			"eEnd"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "huh.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 735012850107571,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "laugh.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 950777810652195,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "laugh2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 367509251035205,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "laugh3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 833229402213370,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sigh.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 187635560932923,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "scale-of-judgement-theme.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 335917087703964,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "reload.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 441461441072346,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 390462523216205,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bounce.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 756080303264879,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "dialogue.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 518679345860785,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "scales-of-judgement-intro.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 413491887082733,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "intro-bgm.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 220744798574440,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "death.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 654865621976693,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "angel.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 889929797845162,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hehehe.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 961401847719667,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "heart.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 207472454788411,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "lava.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 230977089685331,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 653594422144401,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 240342107184899,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 943346043672964,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 922746817282106,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 790889731974717,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 447646436573186,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 333902022689761,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "intro.xml",
+					"type": "text/xml",
+					"sid": 525451372238517,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Succuboss",
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "Shoot your way out of hell",
+		"version": "1.0.0.0",
+		"author": "FeatureKreep",
+		"authorEmail": "featurekreepgames@gmail.com",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": true,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenQuality": "low",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "any",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 640,
+	"viewportHeight": 360,
+	"firstLayout": "Logo"
+}

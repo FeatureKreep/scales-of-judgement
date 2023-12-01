@@ -1,0 +1,699 @@
+{
+	"name": "eEnd",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 776671728363630
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PlayerSprite",
+					"sid": 455424097333997
+				},
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 772066931840962,
+					"parameters": {
+						"cursor-style": "none"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "DialogueText",
+					"sid": 484897775819897,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"End\"",
+						"property": "offsetY",
+						"end-value": "-240",
+						"time": "26",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 566948262276119,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 617598153623218,
+					"parameters": {
+						"audio-file": "angel",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"bgm\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 903888232631913,
+					"parameters": {
+						"seconds": "20"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 618833482900194,
+					"parameters": {
+						"object-to-create": "Enemy",
+						"layer": "\"World\"",
+						"x": "700",
+						"y": "80",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "Enemy",
+					"sid": 801675914556265,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "-100",
+						"y": "Self.Y",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "Enemy",
+					"sid": 813874609965292,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"max-speed": "420"
+					}
+				},
+				{
+					"id": "set-magnitude",
+					"objectClass": "Enemy",
+					"sid": 822132085790963,
+					"behaviorType": "Sway",
+					"parameters": {
+						"magnitude": "16"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 152358059213075,
+					"parameters": {
+						"seconds": "0.6"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 390427255841887,
+					"parameters": {
+						"audio-file": "hehehe",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 645076925194099,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ThanksText",
+					"sid": 450632001487765,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 642062576293854
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "EnemyEye",
+					"sid": 996447896370519,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Blink\""
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "EnemyEye",
+					"sid": 524156284711007
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "EnemyEye",
+					"sid": 329574942640808,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 554771802465064,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "EnemyEye",
+					"sid": 305980476109519,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "EnemyEye",
+					"sid": 521940553767264,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "3.0",
+						"type": "once",
+						"tag": "\"Blink\""
+					}
+				}
+			],
+			"sid": 298007281410188
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 923309311351181,
+					"parameters": {
+						"object": "EnemyEye"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 844028276726586,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 123624419390258,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "112",
+								"upper-bound": "167"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 224584138621888,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 100530959208409
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 335776708216518,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "168",
+								"upper-bound": "203"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 488981701118116,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 671968688556972
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 448437573112383,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "203",
+								"upper-bound": "248"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 134527555685052,
+							"parameters": {
+								"frame-number": "3"
+							}
+						}
+					],
+					"sid": 266254833438546
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 471419273838027,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "-112",
+								"upper-bound": "-67"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 930954065943411,
+							"parameters": {
+								"frame-number": "4"
+							}
+						}
+					],
+					"sid": 341912087100722
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 902905883249003,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "-66",
+								"upper-bound": "-21"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 727774214210763,
+							"parameters": {
+								"frame-number": "5"
+							}
+						}
+					],
+					"sid": 825619204883591
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 163169491124435,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "-22",
+								"upper-bound": "22"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 421860530880949,
+							"parameters": {
+								"frame-number": "6"
+							}
+						}
+					],
+					"sid": 190645156320895
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 521898934026369,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "23",
+								"upper-bound": "68"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 232571082305799,
+							"parameters": {
+								"frame-number": "7"
+							}
+						}
+					],
+					"sid": 780625045346098
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 859025820405636,
+							"parameters": {
+								"value": "angle(EnemyEye.X,EnemyEye.Y,Mouse.X,Mouse.Y)",
+								"lower-bound": "69",
+								"upper-bound": "112"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "EnemyEye",
+							"sid": 328802574385123,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 572850728044652
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Enemy",
+					"sid": 894122105716171
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 842608913418948,
+					"parameters": {
+						"seconds": "0"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Enemy",
+					"sid": 665869681695356,
+					"parameters": {
+						"child": "EnemySprite",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-o": false,
+						"transform-z-elevation": false,
+						"transform-visibility": false,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "EnemySprite",
+					"sid": 317847813830807,
+					"parameters": {
+						"animation": "Enemy.Type & \"Active\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 334615721065559,
+					"parameters": {
+						"object-to-create": "EnemyEye",
+						"layer": "\"World\"",
+						"x": "EnemySprite.ImagePointX(\"Eye\")",
+						"y": "EnemySprite.ImagePointY(\"Eye\")",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Enemy",
+					"sid": 889142177537536,
+					"parameters": {
+						"child": "EnemyEye",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-o": false,
+						"transform-z-elevation": false,
+						"transform-visibility": false,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "EnemyEye",
+					"sid": 251875382585029,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "3.0",
+						"type": "once",
+						"tag": "\"Blink\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 932829496102502,
+					"parameters": {
+						"object-to-create": "EnemyWing",
+						"layer": "\"World\"",
+						"x": "EnemySprite.ImagePointX(\"Eye\")",
+						"y": "EnemySprite.ImagePointY(\"Eye\")",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "EnemyWing",
+					"sid": 234789785953513,
+					"parameters": {
+						"animation": "Enemy.Type",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "EnemyWing",
+					"sid": 297924499525358
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Enemy",
+					"sid": 694362749604382,
+					"parameters": {
+						"child": "EnemyWing",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-o": false,
+						"transform-z-elevation": false,
+						"transform-visibility": false,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 374103272289230,
+					"parameters": {
+						"object-to-create": "EnemyWing",
+						"layer": "\"World\"",
+						"x": "EnemySprite.ImagePointX(\"Eye\")",
+						"y": "EnemySprite.ImagePointY(\"Eye\")",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "EnemyWing",
+					"sid": 617385057185820,
+					"parameters": {
+						"animation": "Enemy.Type",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "EnemyWing",
+					"sid": 367491017247721,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "EnemyWing",
+					"sid": 239512076675327
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Enemy",
+					"sid": 932436299373786,
+					"parameters": {
+						"child": "EnemyWing",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-o": false,
+						"transform-z-elevation": false,
+						"transform-visibility": false,
+						"destroy-with-parent": false
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Enemy",
+					"sid": 339844884047841,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "random(3,8)",
+						"type": "once",
+						"tag": "\"Shoot\""
+					}
+				}
+			],
+			"sid": 749992909980227
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 878288666250064
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "CursorSprite",
+					"sid": 859077141777934,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 740743491860124
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "mouse-button-is-down",
+					"objectClass": "Mouse",
+					"sid": 285221601490065,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "CursorSprite",
+					"sid": 267194382063902,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 630512936012308
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 571870244895273
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "CursorSprite",
+					"sid": 854674068446656,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 387416497082204
+		}
+	],
+	"sid": 896960053119634
+}

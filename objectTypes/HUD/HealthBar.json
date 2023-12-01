@@ -1,0 +1,21 @@
+{
+	"name": "HealthBar",
+	"plugin-id": "TiledBg",
+	"sid": 283067503366674,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 24,
+		"height": 150,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 5498993,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

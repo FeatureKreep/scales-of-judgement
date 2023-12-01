@@ -1,0 +1,99 @@
+{
+	"name": "Enemy",
+	"plugin-id": "Sprite",
+	"sid": 698816030124516,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "HP",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 770589177512592
+		},
+		{
+			"name": "Type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 141060999274028
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 783157535231778
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 717013921354448
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 739137585125537
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 286885761962021
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 500340297807486
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 838449441524273
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sway",
+			"sid": 654237312854343
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Shake",
+			"sid": 389234046057764
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "brightness",
+			"name": "Hurt"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2309144,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 272978924586557,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

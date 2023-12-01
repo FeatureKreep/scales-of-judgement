@@ -1,0 +1,50 @@
+{
+	"name": "CreditsButton",
+	"plugin-id": "Sprite",
+	"sid": 838581732071001,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 37,
+						"height": 34,
+						"originX": 0.4864864864864865,
+						"originY": 0.47058823529411764,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8221706,
+						"collisionPoly": {
+							"points": [
+								0.05405405405405406,
+								0.058823529411764705,
+								0.945945945945946,
+								0.058823529411764705,
+								0.945945945945946,
+								0.9117647058823529,
+								0.05405405405405406,
+								0.9117647058823529
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 322817322535387,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"name": "FG",
+	"plugin-id": "Sprite",
+	"sid": 742122052993065,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 434,
+						"height": 115,
+						"originX": 0.5,
+						"originY": 0.5043478260869565,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5196793,
+						"collisionPoly": {
+							"points": [
+								0.002304147465437788,
+								0,
+								0.9976958525345622,
+								0,
+								0.9976958525345622,
+								1,
+								0.002304147465437788,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 815056145728375,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

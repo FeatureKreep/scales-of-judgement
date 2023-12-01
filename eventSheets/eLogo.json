@@ -1,0 +1,279 @@
+{
+	"name": "eLogo",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "FeatureKreepLogo",
+					"sid": 361283689729448,
+					"parameters": {
+						"animation": "\"Default\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 541652321480898,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "FeatureKreepLogo",
+					"sid": 530944065791154,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Intro\"",
+						"property": "offsetX",
+						"end-value": "260",
+						"time": "0.8",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "FeatureKreep",
+					"sid": 217864596149581,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Intro\"",
+						"property": "offsetX",
+						"end-value": "400",
+						"time": "0.8",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 682962745234088,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Presents",
+					"sid": 292453208101650,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "FeatureKreepLogo",
+					"sid": 903496542900052,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Fall\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.6",
+						"ease": "easeincubic",
+						"destroy-on-complete": "yes",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "FeatureKreep",
+					"sid": 468228140121069,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"Fall\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.6",
+						"ease": "easeincubic",
+						"destroy-on-complete": "yes",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 640779629617181,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 592736732593589,
+					"parameters": {
+						"layout": "TitleScreen"
+					}
+				}
+			],
+			"sid": 554854943222667
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 726472476029468
+				},
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 916825448359385,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 424737085297438,
+					"parameters": {
+						"layout": "TitleScreen"
+					}
+				}
+			],
+			"sid": 214048837356881,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 381142840536070
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 603558775386698,
+					"parameters": {
+						"cursor-style": "none"
+					}
+				}
+			],
+			"sid": 940381377910600
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 802446048277916
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 460559299353679,
+					"parameters": {
+						"cursor-style": "none"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "CursorSprite",
+					"sid": 233324551395715,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 685929762245278
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 925333342137686
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "CursorSprite",
+					"sid": 947840280040761,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 419073021687713
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "mouse-button-is-down",
+					"objectClass": "Mouse",
+					"sid": 808136208598134,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "CursorSprite",
+					"sid": 613957567766345,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 330675919485335
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 904445483915497
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "CursorSprite",
+					"sid": 560887303257715,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 425199545739609
+		}
+	],
+	"sid": 461611972319872
+}

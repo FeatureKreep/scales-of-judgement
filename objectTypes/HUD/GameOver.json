@@ -1,0 +1,61 @@
+{
+	"name": "GameOver",
+	"plugin-id": "Sprite",
+	"sid": 421555220128919,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 879719200387170
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine3",
+			"sid": 622399617225877
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 166,
+						"height": 27,
+						"originX": 0.5060240963855421,
+						"originY": 0.48148148148148145,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9659881,
+						"collisionPoly": {
+							"points": [
+								0.20481927710843373,
+								0.07407407407407407,
+								0.6746987951807228,
+								0.07407407407407407,
+								0.6746987951807228,
+								0.9259259259259259,
+								0.20481927710843373,
+								0.9259259259259259
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 862439282666166,
+				"name": "9",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

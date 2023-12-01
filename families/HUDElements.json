@@ -1,0 +1,28 @@
+{
+	"name": "HUDElements",
+	"plugin-id": "Sprite",
+	"sid": 784256735126948,
+	"instanceVariables": [
+		{
+			"name": "ShakeAngle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 482672592482140
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 478333459306836
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"HealthHUD",
+		"HealthText",
+		"AmmoText",
+		"AmmoHudShake"
+	]
+}

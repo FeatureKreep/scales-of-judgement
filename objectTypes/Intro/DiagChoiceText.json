@@ -1,0 +1,47 @@
+{
+	"name": "DiagChoiceText",
+	"plugin-id": "Spritefont2",
+	"sid": 423770000365608,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Type",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 949968620447991
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 238258959561000
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 117,
+		"height": 60,
+		"originX": 0.8547008547008547,
+		"originY": 0.7,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9827449,
+		"collisionPoly": {
+			"points": [
+				0.008547008547008548,
+				0,
+				1,
+				0,
+				1,
+				1,
+				0.008547008547008548,
+				1
+			]
+		},
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

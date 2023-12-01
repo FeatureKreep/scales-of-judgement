@@ -1,0 +1,41 @@
+{
+	"name": "HellBG",
+	"plugin-id": "TiledBg",
+	"sid": 734980938197975,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 975023793474475
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 478544100751570
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "warpripple",
+			"name": "WarpRipple"
+		},
+		{
+			"effectId": "brightness",
+			"name": "Brightness"
+		}
+	],
+	"image": {
+		"width": 275,
+		"height": 365,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8390700,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}
